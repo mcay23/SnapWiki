@@ -1,5 +1,7 @@
 package com.yuwono.snapwiki;
 
+import android.content.Intent;
+import android.graphics.pdf.PdfDocument;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,8 +13,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        WebView myWebView = (WebView) findViewById(R.id.webView);
-        myWebView.loadUrl("https://en.wikipedia.org/wiki/Carnival_of_Venice");
-        myWebView.setWebViewClient(new WebViewClient());
+
+        Intent myIntent = new Intent(this, PageActivity.class);
+        this.startActivity(myIntent);
+
     }
 }
